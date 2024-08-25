@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importmobilsas</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Enlace a Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <form action="#">
+                <img src="imagenes/logo.avif" alt="logo.avif">
+            </form>
+            <nav>
+                <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+                <div class="nav-links">
+                    <a href="#hero">Inicio</a>
+                    <a href="#promociones">Promociones</a>
+                    <a href="#catalogo">Catálogo</a>
+                    <a href="contacto.html">Contacto</a>
+                    <form action="#">
+                        <input type="text" placeholder="Buscar">
+                        <button type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero-container">
+        <div id="hero">
+            <h1>¡INNOVACIÓN A TU ALCANCE!</h1>
+        </div>
+    </section>
+
+    <section id="swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="imagenes/imagen1.jpg" alt="Imagen 1"></div>
+                <div class="swiper-slide"><img src="imagenes/imagen2.jpg" alt="Imagen 2"></div>
+                <div class="swiper-slide"><img src="imagenes/imagen3.jpg" alt="Imagen 3"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="promociones">
+        <h2>PRODUCTOS EN PROMOCIÓN</h2>
+        <div class="container promociones-grid">
+            <!-- Productos en promoción -->
+            <div class="carta">
+                <img src="imagenes/imagen1.jpg" alt="Producto 1">
+                <h3>Xiaomi Poco F6 Pro 12gb Ram 512gb Rom Dual Sim</h3>
+                <p>Precio de oferta: $3.699.000 COP</p>
+                <p>👇ＥＳＰＥＣＩＦＩＣＡＣＩＯＮＥＳ👇</p>
+                <p>Dispositivo liberado para que elijas la compañía telefónica que prefieras. Compatible con redes 5G...</p>
+                <a href="compra.html">
+                    <button>Comprar</button>
+                </a>
+            </div>
+            <div class="carta">
+                <img src="imagenes/imagen2.jpg" alt="Producto 2">
+                <h3>Samsung Galaxy S24 Ultra 5g Dual Sim</h3>
+                <p>Precio de oferta: $4.100.000 COP</p>
+                <p>👇ＥＳＰＥＣＩＦＩＣＡＣＩＯＮＥＳ👇</p>
+                <p>Dispositivo desbloqueado para que elijas la compañía telefónica que prefieras. Compatible con redes 5G...</p>
+                <a href="compra.html">
+                    <button>Comprar</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo">
+        <h2>CATÁLOGO</h2>
+        <div class="container catalogo-grid">
+            <!-- Productos del catálogo -->
+            <div class="card">
+                <img src="imagenes/imagen3.jpg" alt="Catálogo Producto 1">
+                <h3>Mini Drone Dji Mini 4 Pro Con Cámara 4k Gris 1 Batería</h3>
+                <p>Precio: 3.550.000 COP</p>
+                <a href="compra.html">
+                    <button>Comprar</button>
+                </a>
+                <button>Más información</button>
+            </div>
+            <div class="card">
+                <img src="imagenes/imagen4.jpg" alt="Catálogo Producto 2">
+                <h3>Apple iPhone 15 Pro Max</h3>
+                <p>Precio: 4.499.000 COP</p>
+                <a href="compra.html">
+                    <button>Comprar</button>
+                </a>
+                <button>Más información</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; 2024 Importmobilsas Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace a Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

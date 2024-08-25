@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaomi Poco F6 Pro 12GB RAM 512GB ROM Dual SIM</title>
+    <link rel="stylesheet" href="compra.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <form action="#">
+                <img src="imagenes/logo.avif" alt="logo.avif" href="index.html#">
+            </form>
+            <nav>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html#">Inicio</a>
+                    <a href="index.html#promociones">Promociones</a>
+                    <a href="index.html#catalogo">Catálogo</a>
+                    <a href="#">Contacto</a>
+                    <form action="#">
+                        <input type="text" placeholder="Buscar">
+                        <button type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="imagenes/imagen1.jpg" alt="Xiaomi Poco F6 Pro 12gb Ram 512gb Rom Dual Sim">
+            </div>
+            <div class="product-details">
+                <h1>Xiaomi Poco F6 Pro 12GB RAM 512GB ROM Dual SIM</h1>
+                <p class="price">Precio Normal: <span class="strikethrough">$4.100.000 COP</span></p>
+                <p class="promo-price">Precio de Promoción: <span class="promo">$3.699.900 COP</span></p>
+                <p>Impuestos incluidos. Los gastos de envío se calculan en la pantalla de pago.</p>
+                <div class="options">
+                    <p>Color:</p>
+                    <div class="color-options">
+                        <button class="color-btn black" data-image="imagenes/imagen1"></button>
+                        <button class="color-btn orange" data-image="imagenes/imagen7_blanco"></button>
+                    </div>
+                    <p>Almacenamiento:</p>
+                    <div class="storage-options">
+                        <button class="storage-btn">256GB 8GB RAM</button>
+                        <button class="storage-btn">512GB 12GB RAM</button>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <p>Cantidad</p>
+                    <button class="qty-btn">-</button>
+                    <input type="number" value="1" min="1" max="22">
+                    <button class="qty-btn">+</button>
+                </div>
+                <p>Solo <span class="stock">22 Disponibles</span> / <span class="sold">2 Vendidos</span></p>
+                <div class="timer">
+                    <p>ESTA PROMOCIÓN TERMINA EN:</p>
+                    <div class="time">
+                        <span id="hours">18</span> Horas
+                        <span id="minutes">46</span> Minutos
+                        <span id="seconds">21</span> Segundos
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <button class="cart-btn">Agregar al carrito</button>
+                    <button class="buy-btn">Comprar ahora</button>
+                </div>
+                <p class="payment-methods">Paga Seguro Con</p>
+                <div class="payment-icons">
+                    <img src="imagenes/imagen9.png" alt="Mastercard">
+                    <img src="imagenes/imagen8.png" alt="Visa">
+                    <img src="imagenes/imagen10.jpg" alt="Amex">
+                    <img src="imagenes/imagen11.jpg" alt="Bancolombia">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de error -->
+    <div id="error-form" class="error-form hidden">
+        <div class="form-container">
+            <h2>Ha ocurrido un error, solicite su producto por correo</h2>
+            <form id="error-form-content">
+                <label for="first-name">Nombre:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Apellido:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="product">Producto que solicita:</label>
+                <input type="text" id="product" name="product" value="Xiaomi Poco F6 Pro 12GB RAM 512GB ROM Dual SIM" readonly>
+
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" readonly>
+
+                <label for="storage">Tamaño de memoria:</label>
+                <input type="text" id="storage" name="storage" readonly>
+
+                <label for="message">Mensajes adicionales:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Enviar</button>
+                <button type="button" id="close-form">Cerrar</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Importmobilsas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="compra.js">
+                // Smooth Scroll
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

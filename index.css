@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1 {
+    font-size: 3.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 2.7em;
+    color: #c29629;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    margin: 0;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #886819;
+}
+
+header nav form {
+    display: flex;
+    align-items: center;
+}
+
+header nav form button {
+    margin-left: 10px;
+    background-color: #c29629;
+    border: 2px solid #000000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav form button:hover {
+    background-color: #886819;
+}
+
+header nav button {
+    background-color: #c29629;
+    border: 2px solid #000000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav button:hover {
+    background-color: #886819;
+}
+
+/* General styles for header */
+header {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+header nav .nav-links a {
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+header nav .nav-links a:hover {
+    color: #886819;
+}
+
+header nav form {
+    display: flex;
+    align-items: center;
+}
+
+header nav form button {
+    margin-left: 10px;
+    background-color: #c29629;
+    border: 2px solid #000000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav form button:hover {
+    background-color: #886819;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-bottom: 2px solid #c29629;
+    }
+
+    header nav .nav-links.active {
+        display: flex;
+    }
+
+    header nav .nav-links a {
+        padding: 15px;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+
+    header nav form {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
+#hero-container {
+    margin-top: 100px; /* Asegura que el contenido no se superponga con el header fijo */
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #c29629;
+    background-color: #000000;
+    padding: 20px 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.swiper-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 40%;
+    margin: auto;
+    object-fit: cover;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.05);
+}
+
+.swiper-pagination-bullet {
+    background: #c29629;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #c29629;
+    padding: 200px;
+}
+
+#promociones, #catalogo {
+    margin: 50px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.promociones-grid, .catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.carta, .card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carta:hover, .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carta img, .card img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carta img:hover, .card img:hover {
+    transform: scale(1.05);
+}
+
+.carta h3, .card h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.carta p, .card p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.carta button, .card button {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: #c29629;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carta button:hover, .card button:hover {
+    background-color: #886819;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
